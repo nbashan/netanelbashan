@@ -1,0 +1,32 @@
+<mat-toolbar color="primary" class="navbar">
+    <span class="logo">Netanel's Portfolio</span>
+  
+    <!-- Desktop Navigation -->
+    <nav class="nav-links">
+      <a mat-button routerLink="/">Home</a>
+      <a mat-button routerLink="/about">About</a>
+      <a mat-button routerLink="/projects">Projects</a>
+      <a mat-button routerLink="/skills">Skills</a>
+      <a mat-button routerLink="/contact">Contact</a>
+    </nav>
+  
+    <!-- Dark Mode Toggle -->
+    <button mat-icon-button (click)="toggleDarkMode()">
+      <mat-icon>{{ isDarkMode ? 'dark_mode' : 'light_mode' }}</mat-icon>
+    </button>
+  
+    <!-- Mobile Menu Icon -->
+    <button mat-icon-button (click)="toggleMenu()" class="menu-icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </mat-toolbar>
+  
+  <!-- Mobile Dropdown Menu -->
+  <div class="mobile-menu" [class.open]="menuOpen">
+    <a mat-button routerLink="/" (click)="toggleMenu()">Home</a>
+    <a mat-button routerLink="/about" (click)="toggleMenu()">About</a>
+    <a mat-button routerLink="/projects" (click)="toggleMenu()">Projects</a>
+    <a mat-button routerLink="/skills" (click)="toggleMenu()">Skills</a>
+    <a mat-button routerLink="/contact" (click)="toggleMenu()">Contact</a>
+  </div>
+  

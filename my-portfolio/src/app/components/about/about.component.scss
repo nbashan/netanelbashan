@@ -1,0 +1,153 @@
+.about {
+  padding: 80px 10%;
+  background: #f4f7fc;
+  color: #333;
+  text-align: center;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+
+  /* About Content */
+  .about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1000px;
+
+    .profile-image img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .profile-image img:hover {
+      transform: scale(1.05);
+    }
+
+    .about-text {
+      text-align: left;
+      flex: 1;
+
+      h2 {
+        font-size: 2.5rem;
+        color: #0073e6;
+      }
+
+      .tagline {
+        font-style: italic;
+        color: #666;
+        margin-bottom: 15px;
+      }
+
+      p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+      }
+
+      .highlight {
+        color: #0073e6;
+        font-weight: bold;
+      }
+
+      .cta-buttons {
+        margin-top: 20px;
+        display: flex;
+        gap: 10px;
+      }
+    }
+  }
+
+  /* Skills Section */
+  .skills {
+    max-width: 800px;
+    text-align: center;
+
+    h3 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      color: #0073e6;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .skill {
+      background: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .skill:hover {
+      transform: scale(1.05);
+    }
+
+    mat-icon {
+      color: #0073e6;
+      margin-right: 8px;
+    }
+  }
+
+  /* Timeline */
+  .experience {
+    max-width: 700px;
+    text-align: center;
+
+    h3 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #0073e6;
+    }
+
+    .timeline {
+      position: relative;
+      margin-top: 20px;
+    }
+
+    .timeline-item {
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 20px;
+    }
+
+    .timeline-dot {
+      width: 14px;
+      height: 14px;
+      background: #0073e6;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+    }
+
+    .timeline-content {
+      background: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+}
